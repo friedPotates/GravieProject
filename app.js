@@ -3,7 +3,7 @@ const gameSearch = document.getElementById("searchTerm");
 const searchType = "game"
 const subBtn = document.getElementById("submitBtn");
 
-asd
+
 subBtn.addEventListener("click", function() {
   $(document).ready(function() {
     var url = buildURL(gameSearch.value) + "&callback=?";
