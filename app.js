@@ -3,11 +3,6 @@ const gameSearch = document.getElementById("searchTerm");
 const searchType = "game"
 const subBtn = document.getElementById("submitBtn");
 
-<<<<<<< HEAD
-gg
-
-=======
->>>>>>> 79392262c42259ee0a6a60c2f5641e6453764b2e
 
 subBtn.addEventListener("click", function() {
   $(document).ready(function() {
@@ -19,11 +14,7 @@ subBtn.addEventListener("click", function() {
       type: "GET",
       jsonpCallback: 'processJSONPResponse', // add this property
       contentType: "application/json; charset=utf-8",
-<<<<<<< HEAD
       success: function(result) {
-=======
-      success: function(result, status, xhr) {
->>>>>>> 79392262c42259ee0a6a60c2f5641e6453764b2e
         console.log(result);
       },
       error: function(xhr, status, error) {
