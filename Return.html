@@ -3,29 +3,22 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Gravie Project Rent</title>
+  <title>Gravie Project Return</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body onload="loadAll()">
+<body onload="loadGames()">
   <ul>
   <li><a href="Search.html">Search!</a></li>
   <li><a href="Return.html">Rented Games</a></li>
   <li><a href="ShoppingCart.html">Shopping Cart</a></li>
   </ul>
-  
-  <div id="title">
+
+  <div id="RentedGames">
 
   </div>
 
-  <div id="thumbnail">
+  <button onClick="returnAll()">Return All</button>
 
-  </div>
-
-  <button onclick="rentGame()">Rent</button>
-
-
-
-
-  <script src="RentScript.js"></script>
+  <script src="ReturnScript.js"></script>
 </body>
