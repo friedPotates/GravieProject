@@ -65,9 +65,9 @@ function createList(games){
   for(var i = 0; i < games.length; i++){
     var gameName = games[i]["gameName"];
     var thumbnail = games[i]["thumbnail"]
-    list += "<li><a onClick=\"rentGame(\'" + gameName + "\', \'" + thumbnail + "\')\">"
+    list += "<li><a onClick=\"rentGame(\'" + gameName + "\', \'" + thumbnail + "\')\" href=\"Rent.html\">"
     + gameName
-    + "</ button></li>";
+    + "</button></li>";
   }
 
   list += "</ul>";
