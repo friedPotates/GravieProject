@@ -1,6 +1,6 @@
 const apiKey = "04c058d3ef0debef9020ef8e301820074fdf2f75";
 const gameSearch = document.getElementById("searchTerm");
-const searchType = "game"
+const searchType = "game";
 const subBtn = document.getElementById("submitBtn");
 const gameList = document.getElementById("gameList");
 
@@ -44,10 +44,9 @@ function processJSONPResponse(json) {
 }
 
 function getGames(games){
-  var i;
   var namesAndImages = [];
 
-  for (i = 0; i < games.length; i++){
+  for (var i = 0; i < games.length; i++){
     var name = games[i]["name"];
     var thumbnail = games[i]["image"]["thumb_url"];
 
@@ -62,13 +61,22 @@ function getGames(games){
 
 function createList(games){
   var list = "<ul>";
-  var i;
-  for(i = 0; i < games.length; i++){
-    list += "<li>" + games[i]["gameName"] + "</li>";
-    console.log(games[i]["gameName"]);
+
+  for(var i = 0; i < games.length; i++){
+    var gameName = games[i]["gameName"];
+    var thumbnail = games[i]["thumbnail"]
+    list += "<li><a onClick=\"rentGame(\'" + gameName + "\', \'" + thumbnail + "\')\">"
+    + gameName
+    + "</ button></li>";
   }
 
-  list += "</ul>"
+  list += "</ul>";
   gameList.innerHTML = list;
-  console.log(list);
+}
+
+function rentGame(gameName, thumbnail){
+  localStorage.setItem("currentGame", gameName);
+  localStorage.setItem("currentThumbnail", thumbnail);
+
+  console.log(localStorage.getItem("currentThumbnail"));
 }
