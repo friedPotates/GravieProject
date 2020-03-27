@@ -2,7 +2,7 @@ const apiKey = "04c058d3ef0debef9020ef8e301820074fdf2f75";
 const gameSearch = document.getElementById("searchTerm");
 const searchType = "game";
 const subBtn = document.getElementById("submitBtn");
-const gameList = document.getElementById("gameList");
+const gameList = document.getElementById("searchedGames");
 
 subBtn.addEventListener("click", function() {
   $(document).ready(function() {

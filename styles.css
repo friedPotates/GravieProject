@@ -2,15 +2,55 @@
   box-sizing: border-box;
 }
 
-/* Style the list (remove margins and bullets, etc) */
-ul {
+.navbar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar li{
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: #111;
+}
+
+#searchTerm {
+  width: 100%;
+  border: 3px solid #333;
+  border-right: none;
+  padding: 5px;
+  height: 40px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #333;
+}
+
+.search {
+  width: 50%;
+  position: relative;
+  display: flex;
+}
+
+.gameList ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
 /* Style the list items */
-ul li {
+.gameList ul li {
   border: 1px solid #ddd;
   margin-top: -1px; /* Prevent double borders */
   background-color: #f6f6f6;
@@ -23,7 +63,7 @@ ul li {
 }
 
 /* Add a light grey background color on hover */
-ul li:hover {
+.gameList ul li:hover {
   background-color: #eee;
 }
 
@@ -38,3 +78,23 @@ ul li:hover {
 }
 
 .close:hover {background: #bbb;}
+
+#title {
+  text-align: center;
+}
+
+#rentButton{
+  width: 100%
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.active {
+  background-color: #3471eb;
+  color: white;
+}

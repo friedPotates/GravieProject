@@ -1,4 +1,4 @@
-const rentedGames = document.getElementById("RentedGames");
+const rentedGames = document.getElementById("rentedGames");
 
 function loadGames(){
   createList();
@@ -22,7 +22,6 @@ function createList(){
 
 function createCloseListeners(){
   var closebtns = document.getElementsByClassName("close");
-  var games = JSON.parse(localStorage.getItem("rented"));
 
   for (var i = 0; i < closebtns.length; i++) {
     closebtns[i].addEventListener("click", function() {
