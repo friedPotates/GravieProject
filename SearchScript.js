@@ -77,6 +77,4 @@ function createList(games){
 function rentGame(gameName, thumbnail){
   localStorage.setItem("currentGame", gameName);
   localStorage.setItem("currentThumbnail", thumbnail);
-
-  console.log(localStorage.getItem("currentThumbnail"));
 }
