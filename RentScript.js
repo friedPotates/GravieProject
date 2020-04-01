@@ -19,7 +19,7 @@ function loadThumbnail(){
 function rentGame(){
   var rented = localStorage.getItem("rented");
 
-  if(typeof rented == "undefined"){
+  if(rented == null){
     console.log("undefined")
     var temp = [];
     temp[0] = game;
